@@ -15,7 +15,7 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
     <div className={[styles.matterhornPopup, className].join(" ")}>
       <iframe
         className={styles.video}
-        src={`https://www.youtube.com/embed/sssssdfsdfY?rel=0&autoplay=0&mute=0`}
+        src={`https://www.youtube.com/sssdfsdfY?rel=0&autoplay=0&mute=0`}
         frameBorder="0"
         allowFullScreen
       />
