@@ -6,7 +6,7 @@ export type MatterhornPopupType = {
   onClose?: () => void;
 };
 
-// 这个方法
+// 这个方法yigersha
 const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
   className = "",
   onClose,
@@ -15,7 +15,7 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
     <div className={[styles.matterhornPopup, className].join(" ")}>
       <iframe
         className={styles.video}
-        src={`https://www.youtube.com/embed/DdsfsdfsdfY?rel=1&autoplay=0&mute=1`}
+        src={`https://www.youtube.com/embed/sssssdfsdfY?rel=0&autoplay=0&mute=0`}
         frameBorder="0"
         allowFullScreen
       />
