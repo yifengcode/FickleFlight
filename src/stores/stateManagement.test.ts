@@ -8,6 +8,26 @@ describe('State Management Tests', () => {
   beforeEach(() => {
     // Clear localStorage before each test
     localStorage.clear();
+    
+    // Reset all stores to initial state by getting fresh instances
+    const searchStore = useSearchStore.getState();
+    const userStore = useUserStore.getState();
+    
+    // Reset search store
+    searchStore.resetFlightSearch();
+    searchStore.clearSearchHistory();
+    searchStore.setIsSearching(false);
+    
+    // Reset user store
+    userStore.resetPreferences();
+    userStore.resetProfile();
+    userStore.setAuthenticated(false);
+    
+    // Clear preferred airlines array
+    const currentAirlines = [...userStore.preferredAirlines];
+    currentAirlines.forEach(airline => {
+      userStore.removePreferredAirline(airline);
+    });
   });
 
   describe('Search Store', () => {
