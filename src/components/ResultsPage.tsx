@@ -23,7 +23,7 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
   search,
 }) => {
   const [dateFieldDateTimePickerValue, setDateFieldDateTimePickerValue] =
-    useState(null);
+    useState<Date | null>(null);
   const navigate = useNavigate();
 
   const onFickleflightLogoClick = useCallback(() => {
@@ -149,7 +149,7 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                       <DatePicker
                         label="Date"
                         value={dateFieldDateTimePickerValue}
-                        onChange={(newValue: any) => {
+                        onChange={(newValue: Date | null) => {
                           setDateFieldDateTimePickerValue(newValue);
                         }}
                         sx={{
