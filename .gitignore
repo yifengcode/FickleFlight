@@ -4,6 +4,9 @@
 # Production
 /build
 
+# Testing
+/coverage
+
 # Misc
 .DS_Store
 .env.local
