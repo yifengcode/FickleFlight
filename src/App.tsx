@@ -5,7 +5,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import PortalPopup from "./components/PortalPopup";
+import Homepage from "./components/Homepage";
+import ResultsPage from "./components/ResultsPage";
+import HotelsPage from "./components/HotelsPage";
 
 function App() {
   const action = useNavigationType();
@@ -27,6 +29,14 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/hotels-page":
+        title = "Hotels";
+        metaDescription = "";
+        break;
+      case "/results-page":
+        title = "Search Results";
+        metaDescription = "";
+        break;
     }
 
     if (title) {
@@ -45,7 +55,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PortalPopup />} />
+      <Route path="/" element={<Homepage />} />
+      <Route path="/hotels-page" element={<HotelsPage />} />
+      <Route path="/results-page" element={<ResultsPage />} />
     </Routes>
   );
 }
