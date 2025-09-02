@@ -11,6 +11,51 @@ interface RouterTestProvidersProps {
   children: React.ReactNode;
 }
 
+// Configure Jest to handle date-fns ES modules
+jest.mock('@mui/x-date-pickers/AdapterDateFns', () => ({
+  AdapterDateFns: class MockAdapterDateFns {
+    date() {
+      return new Date();
+    }
+    formatByString() {
+      return '';
+    }
+    isValid() {
+      return true;
+    }
+    isEqual() {
+      return true;
+    }
+    isSameDay() {
+      return true;
+    }
+    isSameMonth() {
+      return true;
+    }
+    isAfter() {
+      return false;
+    }
+    startOfDay() {
+      return new Date();
+    }
+    endOfDay() {
+      return new Date();
+    }
+    addDays() {
+      return new Date();
+    }
+    isWithinRange() {
+      return false;
+    }
+    parse() {
+      return new Date();
+    }
+    format() {
+      return '';
+    }
+  }
+}));
+
 const RouterTestProviders: React.FC<RouterTestProvidersProps> = ({ children }) => {
   return (
     <BrowserRouter>
