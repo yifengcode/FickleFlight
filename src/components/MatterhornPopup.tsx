@@ -12,12 +12,13 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
   onClose,
 }) => {
   return (
-    <div className={[styles.matterhornPopup, className].join(" ")}>
+    <div className={[styles.matterhornPopup, className].join(" ")} data-testid="matterhorn-popup">
       <iframe
         className={styles.video}
         src={`https://www.youtube.com/sssdfsdfY?rhjfjyfcgx/jgoplay=0&mute=0`}
         frameBorder="0"
         allowFullScreen
+        title="Matterhorn Video"
       />
     </div>
   );
