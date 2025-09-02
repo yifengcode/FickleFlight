@@ -1,4 +1,6 @@
 // Test utilities and basic project configuration
+export {}; // Make this file a module to satisfy TypeScript
+
 describe('Test Utilities', () => {
   test('setupTests configuration works', () => {
     // Test that jest-dom matchers are available
