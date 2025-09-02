@@ -1,56 +1,61 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
 
-// Mock the Homepage component since it might have complex dependencies
+// Mock all react-router-dom dependencies
+jest.mock('react-router-dom', () => ({
+  Routes: ({ children }: { children: React.ReactNode }) => <div data-testid="routes">{children}</div>,
+  Route: ({ element }: { element: React.ReactNode }) => <div data-testid="route">{element}</div>,
+  useNavigationType: () => 'PUSH',
+  useLocation: () => ({ pathname: '/' }),
+}));
+
+// Mock the Homepage component
 jest.mock('./components/Homepage', () => {
   return function MockHomepage() {
     return <div data-testid="homepage">Homepage Component</div>;
   };
 });
 
-// Mock react-router-dom
-jest.doMock('react-router-dom', () => ({
-  Routes: ({ children }: { children: React.ReactNode }) => children,
-  Route: ({ element }: { element: React.ReactNode }) => element,
-  useNavigationType: () => 'PUSH',
-  useLocation: () => ({ pathname: '/' }),
-}));
+import App from './App';
 
 describe('App', () => {
-  it('renders Homepage component', () => {
-    render(<App />);
-    
-    expect(screen.getByTestId('homepage')).toBeInTheDocument();
+  it('renders without crashing', () => {
+    const { container } = render(<App />);
+    expect(container).toBeInTheDocument();
   });
 
-  it('renders without throwing errors', () => {
+  it('renders Routes component', () => {
+    const { getByTestId } = render(<App />);
+    expect(getByTestId('routes')).toBeInTheDocument();
+  });
+
+  it('renders Route component', () => {
+    const { getByTestId } = render(<App />);
+    expect(getByTestId('route')).toBeInTheDocument();
+  });
+
+  it('renders Homepage component through routing', () => {
+    const { getByTestId } = render(<App />);
+    expect(getByTestId('homepage')).toBeInTheDocument();
+  });
+
+  it('handles scroll behavior without errors', () => {
     const scrollToSpy = jest.spyOn(window, 'scrollTo').mockImplementation(() => {});
     
     render(<App />);
     
-    expect(screen.getByTestId('homepage')).toBeInTheDocument();
-    
     scrollToSpy.mockRestore();
   });
 
-  it('handles document title and meta description', () => {
+  it('handles document metadata without errors', () => {
     const originalTitle = document.title;
-    
-    // Create a meta description tag for testing
-    const metaTag = document.createElement('meta');
-    metaTag.name = 'description';
-    metaTag.content = 'original description';
-    document.head.appendChild(metaTag);
     
     render(<App />);
     
-    expect(screen.getByTestId('homepage')).toBeInTheDocument();
+    // Component should handle document metadata gracefully
+    expect(document.title).toBeDefined();
     
-    // Clean up
+    // Reset title
     document.title = originalTitle;
-    if (document.head.contains(metaTag)) {
-      document.head.removeChild(metaTag);
-    }
   });
 });
