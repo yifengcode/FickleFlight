@@ -4,6 +4,7 @@ import MatterhornPopup from "./MatterhornPopup";
 import PortalPopup from "./PortalPopup";
 import { useNavigate } from "react-router-dom";
 import styles from "./HotelsPage.module.css";
+import navStyles from "./shared/Navigation.module.css";
 
 export type HotelsPageType = {
   className?: string;
@@ -32,10 +33,10 @@ const HotelsPage: FunctionComponent<HotelsPageType> = ({ className = "" }) => {
   return (
     <>
       <div className={[styles.hotelsPage, className].join(" ")}>
-        <header className={styles.topHeader}>
-          <div className={styles.topContainer}>
+        <header className={navStyles.topHeader}>
+          <div className={navStyles.topContainer}>
             <div
-              className={styles.fickleflightLogo}
+              className={navStyles.fickleflightLogo}
               onClick={onFickleflightLogoContainerClick}
             >
               <div className={styles.symbols}>
@@ -47,33 +48,33 @@ const HotelsPage: FunctionComponent<HotelsPageType> = ({ className = "" }) => {
                 />
               </div>
             </div>
-            <div className={styles.navigationRight}>
-              <div className={styles.navigationMenu}>
+            <div className={navStyles.navigationRight}>
+              <div className={navStyles.navigationMenu}>
                 <div
-                  className={styles.explore}
+                  className={`${navStyles.navigationMenuItem} ${styles.explore}`}
                   onClick={onFickleflightLogoContainerClick}
                 >
                   Explore
                 </div>
-                <div className={styles.explore} onClick={onSearchTextClick}>
+                <div className={`${navStyles.navigationMenuItem} ${styles.explore}`} onClick={onSearchTextClick}>
                   Search
                 </div>
-                <button className={styles.hotels}>Hotels</button>
-                <button className={styles.offers}>Offers</button>
+                <button className={`${navStyles.navigationMenuItem} ${styles.hotels}`}>Hotels</button>
+                <button className={`${navStyles.navigationMenuItem} ${navStyles.navigationMenuItemSecondary} ${styles.offers}`}>Offers</button>
               </div>
-              <div className={styles.accountSection}>
+              <div className={navStyles.accountSection}>
                 <img
-                  className={styles.hamburgerMenuIcon}
+                  className={navStyles.hamburgerMenuIcon}
                   alt=""
                   src="/hamburgermenu.svg"
                 />
                 <img
-                  className={styles.notificationBellIcon}
+                  className={navStyles.notificationBellIcon}
                   alt=""
                   src="/notification-bell.svg"
                 />
                 <img
-                  className={styles.unsplashd1upkifd04aIcon}
+                  className={navStyles.profileIcon}
                   alt=""
                   src="/unsplashd1upkifd04a@2x.png"
                 />
