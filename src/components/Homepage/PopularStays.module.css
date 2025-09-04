@@ -1,0 +1,337 @@
+/* Popular Stays and Hotels Section */
+.popularStays1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  font-family: Roboto;
+  color: #303030;
+  text-align: left;
+  width: 1105.3px;
+}
+.popularStaysTitle {
+  flex: 1;
+  position: relative;
+  height: 35px;
+}
+.viewAllStays {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 140.7px;
+  flex-shrink: 0;
+}
+.viewAllStaysButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.popularStaysHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.matterhornSuitesImage {
+  align-self: stretch;
+  position: relative;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 200px;
+  object-fit: cover;
+}
+.entireBungalow,
+.matterhornSuites,
+.night {
+  align-self: stretch;
+  position: relative;
+  font-family: Roboto;
+  text-align: left;
+}
+.entireBungalow {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #8e8e94;
+}
+.matterhornSuites,
+.night {
+  letter-spacing: 0.04em;
+  color: #303030;
+}
+.matterhornSuites {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+.night {
+  font-size: 18px;
+}
+.videoIcon {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.stayDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 11px;
+}
+.div8,
+.reviews {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  text-align: left;
+}
+.reviews {
+  left: 53.63px;
+  color: #1262af;
+  display: inline-block;
+  width: 216.4px;
+}
+.div8 {
+  left: 20.34px;
+  font-weight: 500;
+  color: #303030;
+}
+.parent,
+.vectorIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vectorIcon {
+  height: 90.53%;
+  width: 37.47%;
+  right: 62.53%;
+  bottom: 9.47%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.parent {
+  width: 44.3px;
+  height: 19px;
+}
+.rating {
+  align-self: stretch;
+  position: relative;
+  height: 19px;
+}
+.button1 {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262af;
+  text-align: left;
+}
+.moreDetailsButton {
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid #ccdcec;
+  box-sizing: border-box;
+  height: 46px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hotelCard,
+.hotelCard1,
+.hotelCard3,
+.stayDetails1 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.hotelCard {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px 13px;
+  gap: 23px;
+  width: 25%;
+}
+.hotelCard3:hover,
+.hotelCard4:hover,
+.hotelCard5:hover,
+.hotelCard:hover {
+  background-color: rgba(226, 226, 226, 0.1);
+  cursor: pointer;
+}
+.hotelCard1,
+.hotelCard3,
+.stayDetails1 {
+  flex-direction: row;
+}
+.hotelCard1 {
+  flex: 1;
+  justify-content: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  width: 25%;
+}
+.hotelCard3,
+.stayDetails1 {
+  justify-content: flex-start;
+}
+.hotelCard3 {
+  border-radius: 10px;
+  background-color: #fff;
+  flex-direction: column;
+  padding: 15px 13px;
+  box-sizing: border-box;
+  gap: 23px;
+  width: 25%;
+}
+.arcticHut,
+.div10,
+.reviews2 {
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  text-align: left;
+}
+.arcticHut {
+  align-self: stretch;
+  position: relative;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #303030;
+}
+.div10,
+.reviews2 {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+}
+.reviews2 {
+  left: 53.73px;
+  color: #1262af;
+  display: inline-block;
+  width: 216.3px;
+}
+.div10 {
+  left: 20.38px;
+  font-weight: 500;
+  color: #303030;
+}
+.container,
+.vectorIcon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vectorIcon2 {
+  height: 90.53%;
+  width: 37.61%;
+  right: 62.39%;
+  bottom: 9.47%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.container {
+  width: 44.4px;
+  height: 19px;
+}
+.hotelCard4,
+.hotelCard5 {
+  align-self: stretch;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 15px 13px;
+  box-sizing: border-box;
+  gap: 23px;
+  width: 25%;
+}
+.hotelCard5 {
+  border: 1px solid #eaeaea;
+}
+.hotelCard41,
+.hotelCards {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.hotelCard41 {
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  width: 25%;
+}
+.hotelCards {
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.viewAllStays1 {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 140.7px;
+  flex-shrink: 0;
+}
+.mobileViewAllStays {
+  border-radius: 31px;
+  background-color: #fff;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.homeContents,
+.popularStays {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.popularStays {
+  margin: 0;
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 20px;
+}

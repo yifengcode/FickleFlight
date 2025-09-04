@@ -1,0 +1,373 @@
+/* Travel Cards and Popular Destinations Section */
+.mostPopularDestinations {
+  align-self: stretch;
+  position: relative;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #303030;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.viewAllDestinations {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 197.3px;
+  flex-shrink: 0;
+}
+.destinationsTitles,
+.viewAllTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.viewAllTop {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  width: 231.4px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.destinationsTitles {
+  align-self: stretch;
+  align-items: center;
+}
+.parisimageIcon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.paris {
+  flex: 1;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+  color: #fff;
+  text-align: left;
+}
+.div,
+.from {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  display: inline-block;
+}
+.div {
+  top: 21px;
+  left: 0;
+  font-size: 38px;
+  line-height: 38px;
+  font-family: "Baloo Bhai";
+  width: 90.9px;
+}
+.from {
+  top: 0;
+  left: 38.39px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  width: 52.5px;
+}
+.details {
+  position: relative;
+  width: 90.9px;
+  height: 59px;
+}
+.destinationDetails {
+  position: absolute;
+  width: calc(100% - 0.6px);
+  top: 0;
+  right: 0.31px;
+  left: 0.29px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+.pariscard {
+  align-self: stretch;
+  position: relative;
+  border-radius: 10px;
+  height: 182px;
+  overflow: hidden;
+}
+.col1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 16px;
+  background-color: transparent;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.div1,
+.from1 {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+}
+.div1 {
+  top: 21px;
+  left: 0;
+  font-size: 38px;
+  line-height: 38px;
+  font-family: "Baloo Bhai";
+}
+.from1 {
+  top: 0;
+  left: 47.39px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  display: inline-block;
+  width: 52.5px;
+}
+.details1 {
+  position: relative;
+  width: 99.9px;
+  height: 59px;
+}
+.div3,
+.from3 {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  display: inline-block;
+}
+.div3 {
+  top: 21px;
+  left: 0;
+  font-size: 38px;
+  line-height: 38px;
+  font-family: "Baloo Bhai";
+  width: 100.6px;
+}
+.from3 {
+  top: 0;
+  left: 48.09px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  width: 52.5px;
+}
+.details3 {
+  position: relative;
+  width: 100.6px;
+  height: 59px;
+}
+.cardsContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.viewAllDestinations1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 197.3px;
+  flex-shrink: 0;
+}
+.popDestinationsMain,
+.viewAllBottom {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.viewAllBottom {
+  border-radius: 31px;
+  background-color: #fff;
+  width: 231.4px;
+  display: none;
+  flex-direction: row;
+  gap: 10px;
+  text-align: right;
+}
+.popDestinationsMain {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #1262ae;
+}
+.recommendedHolidays {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.viewAllHolidays {
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 165.9px;
+  flex-shrink: 0;
+}
+.recTitle,
+.viewAllHolidaysParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.viewAllHolidaysParent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  width: 199.9px;
+  align-items: flex-start;
+  gap: 10px;
+}
+.recTitle {
+  align-self: stretch;
+  align-items: center;
+}
+.unsplash5mv818tzxeoIcon {
+  align-self: stretch;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 242px;
+  object-fit: cover;
+}
+.bali,
+.d3n {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+  text-align: left;
+}
+.bali {
+  font-size: 20px;
+  font-weight: 500;
+  color: #424242;
+}
+.d3n {
+  font-size: 16px;
+  color: #999;
+}
+.baliParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3px;
+}
+.div4 {
+  position: relative;
+  font-size: 32px;
+  line-height: 34px;
+  font-family: "Baloo Bhai";
+  color: #1262af;
+  text-align: right;
+}
+.holidayDetails,
+.recCard1,
+.recCard3,
+.recCard4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.holidayDetails {
+  align-self: stretch;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  justify-content: center;
+  padding: 20px 16px;
+}
+.recCard1,
+.recCard3,
+.recCard4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 16px;
+  background-color: transparent;
+  flex: 1;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  min-width: 230px;
+  width: 25%;
+}
+.recCardsContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.viewAllHolidays1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 165.9px;
+  flex-shrink: 0;
+}
+.viewAllBottom1 {
+  border-radius: 31px;
+  background-color: #fff;
+  width: 199.9px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: right;
+  font-size: 18px;
+  color: #1262ae;
+}
+.recommendedHolidaysContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  font-size: 30px;
+}

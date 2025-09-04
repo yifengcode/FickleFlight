@@ -1,0 +1,271 @@
+/* Flight Cards Section */
+.primaryButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 220px;
+  height: 72px;
+}
+.flightCards,
+.searchResults {
+  display: flex;
+  align-items: flex-start;
+}
+.flightCards {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 9px;
+  font-size: 16px;
+}
+.searchResults {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 80px;
+  font-size: 22px;
+  color: #57575d;
+}
+.newsletterSectionBackground {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 530px;
+  object-fit: cover;
+}
+.formTitle,
+.formTitleSubtext {
+  align-self: stretch;
+  position: relative;
+}
+.formTitleSubtext {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.formTitle {
+  font-size: 30px;
+  color: #434343;
+}
+.formHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.fillInYour {
+  position: relative;
+  line-height: 34px;
+}
+.fillInYour,
+.formText,
+.input {
+  align-self: stretch;
+}
+.formText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.input {
+  border: 0;
+  background-color: transparent;
+  font-family: Roboto;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.formFields {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.button2 {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #fff;
+  text-align: left;
+}
+.unstyledbutton {
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px 22px;
+}
+.button1,
+.form,
+.subscribeForm,
+.unstyledbutton {
+  display: flex;
+  flex-direction: column;
+}
+.button1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #f99a0e;
+  border-radius: 4px;
+  width: 164px;
+  height: 56px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.form,
+.subscribeForm {
+  justify-content: flex-start;
+}
+.form {
+  align-self: stretch;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  align-items: flex-start;
+  padding: 28px 30px;
+  gap: 17px;
+  text-align: left;
+  color: #576074;
+}
+.subscribeForm {
+  position: relative !important;
+  top: 52px;
+  left: auto !important;
+  width: 549px;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletterFormSection {
+  align-self: stretch;
+  position: relative;
+  background-color: #f3f7fb;
+  height: 529px;
+  overflow: hidden;
+}
+.logoIcon {
+  position: relative;
+  width: 174px;
+  height: 33px;
+  overflow: hidden;
+}
+.fickleFlightIs {
+  align-self: stretch;
+  position: relative;
+  line-height: 27px;
+}
+.socialIcons {
+  position: relative;
+  width: 130px;
+  height: 30px;
+}
+.fickleflightBio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-bottom: 40px !important;
+}
+.seperator {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  width: 1px;
+  height: 157.9px;
+}
+.aboutUs {
+  top: 47.76px;
+  width: 135.7px;
+}
+.aboutUs,
+.careers,
+.company1,
+.howWeWork,
+.news {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.company1 {
+  top: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  width: 174.7px;
+}
+.careers,
+.howWeWork,
+.news {
+  top: 78.76px;
+  width: 84.3px;
+}
+.careers,
+.howWeWork {
+  top: 109.76px;
+  width: 115.1px;
+}
+.howWeWork {
+  top: 140.76px;
+  width: 197.3px;
+}
+.company {
+  position: relative;
+  width: 197.3px;
+  height: 159.8px;
+}
+.account,
+.support1 {
+  position: absolute;
+  top: 47.76px;
+  left: 0;
+  display: inline-block;
+  width: 109.6px;
+}
+.support1 {
+  top: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  width: 131.6px;
+}
+.accessibility,
+.faq,
+.supportCenter {
+  position: absolute;
+  top: 78.76px;
+  left: 0;
+  display: inline-block;
+  width: 197.3px;
+}
+.accessibility,
+.faq {
+  top: 109.76px;
+  width: 53px;
+}
+.accessibility {
+  top: 140.76px;
+  width: 164.4px;
+}
+.covidAdvisory {
+  top: 47.76px;
+  width: 172.9px;
+}

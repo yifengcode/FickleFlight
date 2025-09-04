@@ -1,0 +1,211 @@
+/* Responsive Design and Media Queries */
+@media screen and (max-width: 1200px) {
+  .topHeader {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  .searchFilters {
+    display: none;
+  }
+  .footer,
+  .searchResults {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navigationMenu {
+    display: none;
+  }
+  .hamburgerMenuIcon {
+    display: block;
+  }
+  .topHeader {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  .whereAreYou {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .inputsRow {
+    width: 100%;
+  }
+  .searchFlightsButton {
+    margin-right: auto;
+  }
+  .buttonGroup {
+    width: 100%;
+    text-align: left;
+  }
+  .searchForm {
+    flex-direction: column;
+  }
+  .searchSection {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    top: calc(44% - 96.5px - 0px);
+  }
+  .airlineSection {
+    flex-direction: column;
+  }
+  .flightDetailsSection,
+  .flightDetailsSection1,
+  .flightDetailsSection4 {
+    flex-direction: row;
+  }
+  .searchResults,
+  .subscribeForm {
+    padding: 20px 24px;
+    box-sizing: border-box;
+  }
+  .subscribeForm {
+    padding: 24px 0;
+  }
+  .fickleflightBio {
+    flex: unset;
+    align-self: stretch;
+  }
+  .seperator {
+    display: none;
+  }
+  .footerLinks {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 40px 24px 30px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navigationRight {
+    display: flex;
+  }
+  .whereAreYou {
+    font-size: 31px;
+    line-height: 40px;
+  }
+  .inputGroup {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .inputsRow {
+    flex-direction: column;
+  }
+  .searchFlightsButton {
+    width: 100% !important;
+  }
+  .searchSection {
+    width: 100%;
+    top: calc(32% - 96.5px - 0px);
+  }
+  .searchContainer {
+    height: 480px;
+  }
+  .turkishIcon {
+    transform: scale(0.8);
+  }
+  .airlineSection {
+    flex-direction: row;
+    width: 100% !important;
+    margin-left: 40px;
+  }
+  .flightduration {
+    transform: scale(0.9);
+  }
+  .flightDetailsSection {
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+  }
+  .priceSectionChild {
+    display: none;
+  }
+  .flightCard {
+    flex-direction: column;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  .flightduration1 {
+    transform: scale(0.9);
+  }
+  .flightDetailsSection1 {
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+  }
+  .flightCard1 {
+    flex-direction: column;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  .flightDetailsSection4 {
+    width: 90%;
+    flex-direction: row;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 0 !important;
+  }
+  .flightduration5 {
+    transform: scale(0.9);
+  }
+  .button1 {
+    width: 100%;
+  }
+  .button1:hover {
+    background-color: #f99a0e;
+  }
+  .subscribeForm {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    left: auto !important;
+    width: 100%;
+  }
+  .company {
+    margin-bottom: 40px !important;
+  }
+  .footerLinks {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 30px 24px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 428px) {
+  .am,
+  .sin {
+    font-size: 16px;
+  }
+  .departureDetails {
+    width: 80px;
+  }
+  .h55mNonStop {
+    font-size: 13px;
+  }
+  .sin1 {
+    font-size: 16px;
+  }
+  .arrivalDetails {
+    width: 80px;
+  }
+  .flightDetailsSection,
+  .flightDetailsSection4 {
+    width: 90%;
+  }
+}
