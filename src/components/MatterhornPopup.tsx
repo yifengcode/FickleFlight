@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, memo } from "react";
 import styles from "./MatterhornPopup.module.css";
 
 export type MatterhornPopupType = {
@@ -22,4 +22,4 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
   );
 };
 
-export default MatterhornPopup;
+export default memo(MatterhornPopup);
