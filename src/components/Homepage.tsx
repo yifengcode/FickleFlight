@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback, useMemo } from "react";
 import {
   Radio,
   FormControlLabel,
@@ -42,6 +42,22 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
   const onHotelsTextClick = useCallback(() => {
     navigate("/hotels-page");
   }, [navigate]);
+
+  // Memoize DatePicker sx prop to prevent unnecessary re-renders
+  const datePickerSx = useMemo(
+    () => ({
+      "& .MuiPickersInputBase-sectionsContainer": {
+        width: "unset",
+      },
+    }),
+    []
+  );
+
+  // Memoize TextField sx prop to prevent unnecessary re-renders
+  const textFieldSx = useMemo(
+    () => ({ "& .MuiInputBase-root": { height: "56px" } }),
+    []
+  );
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -188,11 +204,7 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                             onChange={(newValue: any) => {
                               setSelectOutlinedDateTimePickerValue(newValue);
                             }}
-                            sx={{
-                              "& .MuiPickersInputBase-sectionsContainer": {
-                                width: "unset",
-                              },
-                            }}
+                            sx={datePickerSx}
                             slotProps={{
                               textField: {
                                 variant: "outlined",
@@ -721,7 +733,7 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                         size="medium"
                         variant="outlined"
                         type="text"
-                        sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                        sx={textFieldSx}
                       />
                     </div>
                     <div className={styles.formText}>
@@ -732,7 +744,7 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                         size="medium"
                         variant="outlined"
                         type="text"
-                        sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                        sx={textFieldSx}
                       />
                     </div>
                   </div>

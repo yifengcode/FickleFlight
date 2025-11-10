@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback, useMemo } from "react";
 import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
 import MatterhornPopup from "./MatterhornPopup";
 import PortalPopup from "./PortalPopup";
@@ -28,6 +28,12 @@ const HotelsPage: FunctionComponent<HotelsPageType> = ({ className = "" }) => {
   const onSearchTextClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
+
+  // Memoize TextField sx prop to prevent unnecessary re-renders
+  const textFieldSx = useMemo(
+    () => ({ "& .MuiInputBase-root": { height: "56px" } }),
+    []
+  );
 
   return (
     <>
@@ -320,7 +326,7 @@ const HotelsPage: FunctionComponent<HotelsPageType> = ({ className = "" }) => {
                       size="medium"
                       variant="outlined"
                       type="text"
-                      sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                      sx={textFieldSx}
                     />
                   </div>
                   <div className={styles.formText}>
@@ -331,7 +337,7 @@ const HotelsPage: FunctionComponent<HotelsPageType> = ({ className = "" }) => {
                       size="medium"
                       variant="outlined"
                       type="text"
-                      sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                      sx={textFieldSx}
                     />
                   </div>
                 </div>
