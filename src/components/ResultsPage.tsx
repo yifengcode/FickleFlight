@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback, useMemo } from "react";
 import {
   Autocomplete,
   TextField,
@@ -33,6 +33,22 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
   const onHotelsTextClick = useCallback(() => {
     navigate("/hotels-page");
   }, [navigate]);
+
+  // Memoize DatePicker sx prop to prevent unnecessary re-renders
+  const datePickerSx = useMemo(
+    () => ({
+      "& .MuiPickersInputBase-sectionsContainer": {
+        width: "unset",
+      },
+    }),
+    []
+  );
+
+  // Memoize TextField sx prop to prevent unnecessary re-renders
+  const textFieldSx = useMemo(
+    () => ({ "& .MuiInputBase-root": { height: "56px" } }),
+    []
+  );
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -152,11 +168,7 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                         onChange={(newValue: any) => {
                           setDateFieldDateTimePickerValue(newValue);
                         }}
-                        sx={{
-                          "& .MuiPickersInputBase-sectionsContainer": {
-                            width: "unset",
-                          },
-                        }}
+                        sx={datePickerSx}
                         slotProps={{
                           textField: {
                             variant: "outlined",
@@ -564,7 +576,7 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                         size="medium"
                         variant="outlined"
                         type="text"
-                        sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                        sx={textFieldSx}
                       />
                     </div>
                     <div className={styles.formText}>
@@ -575,7 +587,7 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                         size="medium"
                         variant="outlined"
                         type="text"
-                        sx={{ "& .MuiInputBase-root": { height: "56px" } }}
+                        sx={textFieldSx}
                       />
                     </div>
                   </div>
