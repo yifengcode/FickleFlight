@@ -11,6 +11,8 @@ import {
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
+import { useSearchStore } from "../stores";
+import SearchHistory from "./SearchHistory";
 import styles from "./ResultsPage.module.css";
 
 export type ResultsPageType = {
@@ -22,9 +24,16 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
   className = "",
   search,
 }) => {
-  const [dateFieldDateTimePickerValue, setDateFieldDateTimePickerValue] =
-    useState(null);
   const navigate = useNavigate();
+  
+  // Use search store for flight search state
+  const { 
+    flightSearch, 
+    setFlightSearch, 
+    addToSearchHistory,
+    setIsSearching,
+    isSearching
+  } = useSearchStore();
 
   const onFickleflightLogoClick = useCallback(() => {
     navigate("/homepage");
@@ -33,6 +42,31 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
   const onHotelsTextClick = useCallback(() => {
     navigate("/hotels-page");
   }, [navigate]);
+
+  const handleDepartureChange = useCallback((value: string | null) => {
+    if (value) {
+      setFlightSearch({ departure: value });
+    }
+  }, [setFlightSearch]);
+
+  const handleArrivalChange = useCallback((value: string | null) => {
+    if (value) {
+      setFlightSearch({ arrival: value });
+    }
+  }, [setFlightSearch]);
+
+  const handleDateChange = useCallback((newValue: Date | null) => {
+    setFlightSearch({ departureDate: newValue });
+  }, [setFlightSearch]);
+
+  const handleNewSearch = useCallback(() => {
+    // Add current search to history
+    addToSearchHistory(flightSearch);
+    setIsSearching(true);
+    
+    // Simulate search delay
+    setTimeout(() => setIsSearching(false), 1500);
+  }, [flightSearch, addToSearchHistory, setIsSearching]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -114,7 +148,8 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                           helperText=""
                         />
                       )}
-                      defaultValue="Singapore -  Changi (SIN)"
+                      value={flightSearch.departure}
+                      onChange={(_, value) => handleDepartureChange(value)}
                     />
                   </div>
                   <div className={styles.inputGroup}>
@@ -141,17 +176,16 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                           helperText=""
                         />
                       )}
-                      defaultValue="Los Angeles (LA)"
+                      value={flightSearch.arrival}
+                      onChange={(_, value) => handleArrivalChange(value)}
                     />
                   </div>
                   <div className={styles.inputGroup}>
                     <div className={styles.departureField}>
                       <DatePicker
                         label="Date"
-                        value={dateFieldDateTimePickerValue}
-                        onChange={(newValue: any) => {
-                          setDateFieldDateTimePickerValue(newValue);
-                        }}
+                        value={flightSearch.departureDate}
+                        onChange={handleDateChange}
                         sx={{
                           "& .MuiPickersInputBase-sectionsContainer": {
                             width: "unset",
@@ -177,11 +211,18 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
                   </div>
                 </div>
                 <div className={styles.buttonGroup}>
-                  <button className={styles.searchFlightsButton}>
-                    <div className={styles.button}>Search flights</div>
+                  <button 
+                    className={styles.searchFlightsButton}
+                    onClick={handleNewSearch}
+                    disabled={isSearching}
+                  >
+                    <div className={styles.button}>
+                      {isSearching ? "Searching..." : "Search flights"}
+                    </div>
                   </button>
                 </div>
               </div>
+              <SearchHistory />
             </div>
           </div>
         </div>
