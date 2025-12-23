@@ -1,0 +1,306 @@
+/* Upcoming Flights and Travel Features Section */
+.sin,
+.singapore,
+.upcomingFlight {
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 1268.1px;
+}
+.sin,
+.singapore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+  width: 44.7px;
+}
+.singapore {
+  top: 30px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #8e8e94;
+  width: 72px;
+}
+.fromDetails {
+  position: relative;
+  width: 72px;
+  height: 46px;
+}
+.h55m {
+  position: absolute;
+  top: 28.09px;
+  left: 23.69px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 65.7px;
+}
+.flightIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 117.4px;
+  height: 24px;
+}
+.duration {
+  position: relative;
+  width: 117.4px;
+  height: 44.1px;
+  font-size: 14px;
+  color: #8e8e94;
+}
+.lax,
+.losAngeles {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 51.3px;
+}
+.losAngeles {
+  top: 30px;
+  left: 0;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #8e8e94;
+  width: 87.3px;
+}
+.toDetails {
+  position: relative;
+  width: 87.3px;
+  height: 46px;
+  text-align: right;
+}
+.toAndFrom {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
+.horizontalLine {
+  align-self: stretch;
+  position: relative;
+  border-top: 1px solid #eaeaea;
+  box-sizing: border-box;
+  height: 1px;
+}
+.daysToGoContainer,
+.departsOn1 {
+  position: relative;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.departsOn1 {
+  text-transform: capitalize;
+  width: 203.9px;
+}
+.daysToGoContainer {
+  text-align: right;
+  width: 87.2px;
+}
+.departureDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  font-size: 14px;
+  color: #8e8e94;
+}
+.flightMainContainer {
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 21px;
+}
+.lineSeparator {
+  position: relative;
+  border-right: 1px solid #eaeaea;
+  box-sizing: border-box;
+  width: 1px;
+  height: 146px;
+}
+.prepareForYour {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hotelIcon {
+  position: relative;
+  width: 65.4px;
+  height: 65.4px;
+}
+.hotel1 {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: left;
+}
+.hotel {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: #ff9b53;
+  width: 65.4px;
+  height: 65.4px;
+}
+.ticketIcon {
+  position: absolute;
+  height: 47.86%;
+  width: 48.32%;
+  top: 26.03%;
+  right: 25.88%;
+  bottom: 26.11%;
+  left: 25.8%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.attractions1 {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: center;
+}
+.background1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: #fdbf00;
+  width: 65.4px;
+  height: 65.4px;
+}
+.trainIcon {
+  position: absolute;
+  height: 48.47%;
+  width: 41.13%;
+  top: 26.5%;
+  right: 29.46%;
+  bottom: 25.03%;
+  left: 29.41%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.background2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: #4dabff;
+  width: 70px;
+  height: 65.4px;
+}
+.taxiIcon1 {
+  position: absolute;
+  height: 40.21%;
+  width: 40.57%;
+  top: 29.63%;
+  right: 29.69%;
+  bottom: 30.16%;
+  left: 29.74%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.taxiIcon {
+  position: relative;
+  width: 70px;
+  height: 65.4px;
+}
+.taxi1 {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: center;
+  display: inline-block;
+  width: 32.1px;
+}
+.background3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background-color: #79ca00;
+  width: 65.4px;
+  height: 65.4px;
+}
+.movieIcon {
+  position: absolute;
+  height: 35.63%;
+  width: 39.91%;
+  top: 32.19%;
+  right: 30.06%;
+  bottom: 32.18%;
+  left: 30.03%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.tripMenus {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+}
+.flightDetails,
+.prepareMenu,
+.upcomingFlightSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.prepareMenu {
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  color: #cecece;
+}
+.flightDetails,
+.upcomingFlightSection {
+  align-self: stretch;
+}
+.flightDetails {
+  flex-direction: row;
+  gap: 36px;
+  font-size: 24px;
+  color: #1262ae;
+}
+.upcomingFlightSection {
+  flex-direction: column;
+  gap: 20px;
+}
