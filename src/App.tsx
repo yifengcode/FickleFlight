@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PortalPopup />} />
+      <Route path="/" element={<PortalPopup><div>Loading...</div></PortalPopup>} />
     </Routes>
   );
 }
