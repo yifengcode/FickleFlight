@@ -23,7 +23,7 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
   const [
     selectOutlinedDateTimePickerValue,
     setSelectOutlinedDateTimePickerValue,
-  ] = useState(null);
+  ] = useState<Date | null>(null);
   const [isMatterhornPopupOpen, setMatterhornPopupOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -185,7 +185,7 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                           <DatePicker
                             label="Date"
                             value={selectOutlinedDateTimePickerValue}
-                            onChange={(newValue: any) => {
+                            onChange={(newValue: Date | null) => {
                               setSelectOutlinedDateTimePickerValue(newValue);
                             }}
                             sx={{
