@@ -48,7 +48,7 @@ function SearchForm() {
 
   return (
     <section className="hero-section">
-      <h2>Find Your Flight</h2>
+      <h2>Find Your Flights</h2>
       {submitted && (
         <p className="success-message">
           Searching for flights from {from} to {to} on {departDate} for {passengers} passenger(s)!
