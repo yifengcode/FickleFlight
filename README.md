@@ -1,8 +1,25 @@
-# FickleFlight - 1
+# FickleFlight
 
-  Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code> with a minimum version of 20.
+FickleFlight is a React 19 + TypeScript single-page app styled with Material UI for browsing flight and hotel options.
 
-  To preview and run the project on your device:
-  1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
-  2) In the terminal, run `npm install`
-  3) Run `npm start` to view project in browser
+## Prerequisites
+- Node.js 20 or newer
+- npm (included with Node)
+
+## Getting started
+```bash
+npm install
+npm start
+```
+Then open http://localhost:3000 to view the app.
+
+## Scripts
+- `npm start` - Start the development server with live reload.
+- `npm test -- --watch=false --passWithNoTests` - Run the test suite. The current project has no tests, so the flag exits cleanly.
+- `npm run build` - Create a production build in the `build/` directory.
+- `npm run eject` - Eject from Create React App (not reversible).
+
+## Project layout
+- `src/App.tsx` - App entry and routing.
+- `src/components/` - Shared UI components such as `PortalPopup`.
+- `public/` - Static assets and the HTML template.
