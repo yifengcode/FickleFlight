@@ -12,7 +12,9 @@ import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import MatterhornPopup from "./MatterhornPopup";
 import PortalPopup from "./PortalPopup";
+import SearchHistory from "./SearchHistory";
 import { useNavigate } from "react-router-dom";
+import { useSearchStore } from "../stores";
 import styles from "./Homepage.module.css";
 
 export type HomepageType = {
@@ -20,12 +22,16 @@ export type HomepageType = {
 };
 
 const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
-  const [
-    selectOutlinedDateTimePickerValue,
-    setSelectOutlinedDateTimePickerValue,
-  ] = useState(null);
   const [isMatterhornPopupOpen, setMatterhornPopupOpen] = useState(false);
   const navigate = useNavigate();
+  
+  // Use search store for flight search state
+  const { 
+    flightSearch, 
+    setFlightSearch, 
+    addToSearchHistory,
+    setIsSearching
+  } = useSearchStore();
 
   const openMatterhornPopup = useCallback(() => {
     setMatterhornPopupOpen(true);
@@ -42,6 +48,38 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
   const onHotelsTextClick = useCallback(() => {
     navigate("/hotels-page");
   }, [navigate]);
+
+  const handleFlightSearch = useCallback(() => {
+    // Add current search to history
+    addToSearchHistory(flightSearch);
+    setIsSearching(true);
+    
+    // Navigate to results page
+    navigate("/results");
+    
+    // Reset searching state after a brief moment
+    setTimeout(() => setIsSearching(false), 1000);
+  }, [flightSearch, addToSearchHistory, setIsSearching, navigate]);
+
+  const handleDepartureChange = useCallback((value: string | null) => {
+    if (value) {
+      setFlightSearch({ departure: value });
+    }
+  }, [setFlightSearch]);
+
+  const handleArrivalChange = useCallback((value: string | null) => {
+    if (value) {
+      setFlightSearch({ arrival: value });
+    }
+  }, [setFlightSearch]);
+
+  const handleDateChange = useCallback((newValue: Date | null) => {
+    setFlightSearch({ departureDate: newValue });
+  }, [setFlightSearch]);
+
+  const handleTripTypeChange = useCallback((tripType: 'one-way' | 'return') => {
+    setFlightSearch({ tripType });
+  }, [setFlightSearch]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -113,14 +151,25 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                           className={styles.radio}
                           label="Return"
                           labelPlacement="end"
-                          control={<Radio size="medium" />}
+                          control={
+                            <Radio 
+                              size="medium" 
+                              checked={flightSearch.tripType === 'return'}
+                              onChange={() => handleTripTypeChange('return')}
+                            />
+                          }
                         />
                         <FormControlLabel
                           className={styles.radio1}
                           label="One-way"
                           labelPlacement="end"
                           control={
-                            <Radio color="primary" checked size="medium" />
+                            <Radio 
+                              color="primary" 
+                              size="medium" 
+                              checked={flightSearch.tripType === 'one-way'}
+                              onChange={() => handleTripTypeChange('one-way')}
+                            />
                           }
                         />
                       </div>
@@ -150,7 +199,8 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                               helperText=""
                             />
                           )}
-                          defaultValue="Singapore -  Changi (SIN)"
+                          value={flightSearch.departure}
+                          onChange={(_, value) => handleDepartureChange(value)}
                         />
                       </div>
                       <div className={styles.inputGroup}>
@@ -177,17 +227,16 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                               helperText=""
                             />
                           )}
-                          defaultValue="Los Angeles (LA)"
+                          value={flightSearch.arrival}
+                          onChange={(_, value) => handleArrivalChange(value)}
                         />
                       </div>
                       <div className={styles.inputGroup}>
                         <div className={styles.selectoutlined}>
                           <DatePicker
                             label="Date"
-                            value={selectOutlinedDateTimePickerValue}
-                            onChange={(newValue: any) => {
-                              setSelectOutlinedDateTimePickerValue(newValue);
-                            }}
+                            value={flightSearch.departureDate}
+                            onChange={handleDateChange}
                             sx={{
                               "& .MuiPickersInputBase-sectionsContainer": {
                                 width: "unset",
@@ -215,13 +264,14 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
                     <div className={styles.buttonGroup}>
                       <button
                         className={styles.searchFlightsButton}
-                        onClick={onSearchTextClick}
+                        onClick={handleFlightSearch}
                       >
                         <div className={styles.button}>Search flights</div>
                       </button>
                     </div>
                   </div>
                 </div>
+                <SearchHistory />
               </div>
             </div>
           </div>
