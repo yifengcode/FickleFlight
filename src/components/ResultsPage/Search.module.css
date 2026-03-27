@@ -1,0 +1,128 @@
+/* Search Section styles */
+.bannerBackgroundIcon,
+.bannerGradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.bannerGradient {
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(78.78deg, #114f8b 5.2%, #2a9ad7);
+}
+.bannerBackgroundIcon {
+  top: 0.4px;
+  bottom: -0.4px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.whereAreYou {
+  align-self: stretch;
+  position: relative;
+  line-height: 67px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.departureField,
+.title {
+  align-self: stretch;
+}
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.inputsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  width: 147px;
+}
+.buttonGroup,
+.searchFlightsButton,
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchFlightsButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #f99a0e;
+  border-radius: 4px;
+  width: 164px;
+  height: 56px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.button1:hover,
+.searchFlightsButton:hover {
+  background-color: #dc880b;
+}
+.buttonGroup,
+.searchForm {
+  padding: 5px;
+}
+.searchForm {
+  align-self: stretch;
+  border-radius: 10px;
+  background-color: #fff;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+.searchSection {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 96.5px);
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+.searchContainer {
+  align-self: stretch;
+  position: relative;
+  height: 362px;
+}
+.searchFormSection {
+  align-self: stretch;
+  background: linear-gradient(100.3deg, #114f8b, #2a9ad7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: "Baloo Bhai";
+}

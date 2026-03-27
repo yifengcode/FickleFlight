@@ -1,0 +1,327 @@
+/* Responsive Design and Media Queries */
+@media screen and (max-width: 1200px) {
+  .topHeader {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  .flightMainContainer {
+    width: 520px;
+  }
+  .hotelCard,
+  .hotelCard3,
+  .hotelCard4,
+  .hotelCard5 {
+    width: 25% !important;
+  }
+  .footer,
+  .hotelCards {
+    box-sizing: border-box;
+  }
+  .hotelCards {
+    padding-right: 40px;
+    margin-left: -12px;
+    margin-right: -50px;
+  }
+  .footer {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navigationMenu {
+    display: none;
+  }
+  .hamburgerMenuIcon {
+    display: block;
+  }
+  .topHeader {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  .inputsRow {
+    width: 100%;
+  }
+  .searchFlightsButton {
+    margin-right: auto;
+  }
+  .buttonGroup {
+    width: 100%;
+    text-align: left;
+  }
+  .formInputsRow,
+  .searchForm {
+    flex-direction: column;
+  }
+  .searchContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+  .horizontalLine {
+    width: 100%;
+  }
+  .flightMainContainer {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .lineSeparator {
+    display: none;
+  }
+  .prepareMenu {
+    width: 100%;
+  }
+  .flightDetails {
+    flex-direction: column;
+  }
+  .upcomingFlightSection {
+    display: block;
+  }
+  .viewAllTop {
+    display: none;
+  }
+  .col1 {
+    padding: 16px;
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .cardsContainer {
+    flex-wrap: wrap;
+    margin: -16px;
+  }
+  .viewAllDestinations1 {
+    width: auto;
+  }
+  .viewAllBottom {
+    display: flex;
+    margin-top: 16px;
+  }
+  .viewAllHolidaysParent {
+    display: none;
+  }
+  .recCard1 {
+    width: 50%;
+    margin-bottom: 32px;
+  }
+  .recCard3,
+  .recCard4 {
+    width: 50%;
+  }
+  .recCardsContainer {
+    margin-left: -16px;
+    margin-right: -16px;
+    flex-wrap: wrap;
+  }
+  .viewAllHolidays1 {
+    width: auto;
+  }
+  .viewAllBottom1 {
+    display: flex;
+    mrgin-top: 16px;
+  }
+  .viewAllStaysButton {
+    display: none;
+  }
+  .hotelCard {
+    width: 100%;
+  }
+  .hotelCard1 {
+    width: 33.33%;
+  }
+  .hotelCard3,
+  .hotelCard4 {
+    width: 100%;
+  }
+  .hotelCard5 {
+    width: 33.33% !important;
+  }
+  .hotelCard41 {
+    display: none;
+    width: 33.33%;
+  }
+  .hotelCards {
+    margin-right: -50px;
+    margin-left: -12px;
+  }
+  .viewAllStays1 {
+    width: auto;
+  }
+  .mobileViewAllStays {
+    display: flex;
+    margin-top: 16px;
+  }
+  .homeContents {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+  .shareYourTravelsForm {
+    padding: 24px 0;
+    box-sizing: border-box;
+  }
+  .fickleflightBio {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footerChild {
+    display: none;
+  }
+  .footerLinks {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 40px 24px 30px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navigationRight {
+    display: flex;
+  }
+  .letsExplore {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .searchFlights {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eaeaea;
+    flex: unset;
+    align-self: stretch;
+  }
+  .flightType {
+    width: 100% !important;
+  }
+  .flightOptions {
+    width: 100%;
+  }
+  .formTitleGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inputGroup {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .inputsRow {
+    flex-direction: column;
+  }
+  .searchFlightsButton {
+    width: 100% !important;
+  }
+  .searchForm {
+    margin-top: 20px;
+  }
+  .hotel {
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+  }
+  .tripMenus {
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -28px;
+    margin-right: -28px;
+  }
+  .mostPopularDestinations {
+    font-size: 22px;
+  }
+  .destinationsTitles {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .col1 {
+    width: 100%;
+  }
+  .recommendedHolidays {
+    font-size: 22px;
+  }
+  .recCard1,
+  .recCard3 {
+    margin-bottom: 32px;
+  }
+  .recCard1,
+  .recCard3,
+  .recCard4 {
+    min-width: 250px;
+    width: 100%;
+  }
+  .popularStays1 {
+    font-size: 22px;
+  }
+  .matterhornSuites {
+    font-size: 20px;
+  }
+  .hotelCard,
+  .moreDetailsButton {
+    width: 100% !important;
+  }
+  .hotelCard {
+    margin-bottom: 20px;
+  }
+  .hotelCard1 {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .hotelCard3 {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .hotelCard4,
+  .hotelCard5 {
+    display: flex;
+    width: 100% !important;
+  }
+  .hotelCard41 {
+    flex: unset;
+    align-self: stretch;
+  }
+  .hotelCards {
+    flex-direction: column;
+    padding-right: 0;
+    box-sizing: border-box;
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+  .button5 {
+    width: 100%;
+  }
+  .button5:hover,
+  .homepage:hover {
+    background-color: #f99a0e;
+  }
+  .shareYourTravelsForm {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    left: auto !important;
+    width: 100%;
+  }
+  .company {
+    margin-bottom: 40px !important;
+  }
+  .footerLinks {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 30px 24px;
+    box-sizing: border-box;
+  }
+  .homepage {
+    width: 100%;
+  }
+}

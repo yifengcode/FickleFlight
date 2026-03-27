@@ -5,7 +5,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import PortalPopup from "./components/PortalPopup";
+import Homepage from "./components/Homepage";
+import ResultsPage from "./components/ResultsPage";
+import HotelsPage from "./components/HotelsPage";
 
 function App() {
   const action = useNavigationType();
@@ -24,8 +26,16 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "FickleFlight - Homepage";
+        metaDescription = "Find the best flights and travel deals";
+        break;
+      case "/results":
+        title = "FickleFlight - Search Results";
+        metaDescription = "Flight search results";
+        break;
+      case "/hotels-page":
+        title = "FickleFlight - Hotels";
+        metaDescription = "Find the best hotels";
         break;
     }
 
@@ -45,7 +55,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PortalPopup />} />
+      <Route path="/" element={<Homepage />} />
+      <Route path="/homepage" element={<Homepage />} />
+      <Route path="/results" element={<ResultsPage />} />
+      <Route path="/hotels-page" element={<HotelsPage />} />
     </Routes>
   );
 }
