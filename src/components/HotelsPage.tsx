@@ -1,5 +1,5 @@
 import { FunctionComponent, useState, useCallback } from "react";
-import { TextField, InputAdornment, Icon, IconButton } from "@mui/material";
+import { TextField } from "@mui/material";
 import MatterhornPopup from "./MatterhornPopup";
 import PortalPopup from "./PortalPopup";
 import { useNavigate } from "react-router-dom";

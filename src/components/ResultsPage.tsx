@@ -2,11 +2,8 @@ import { FunctionComponent, useState, useCallback } from "react";
 import {
   Autocomplete,
   TextField,
-  Icon,
   Checkbox,
   FormControlLabel,
-  InputAdornment,
-  IconButton,
 } from "@mui/material";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
