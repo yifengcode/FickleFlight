@@ -127,15 +127,7 @@ const PortalPopup: FunctionComponent<PopupProps> = ({
       style.maxHeight = "90%";
       setRelativeStyle(style);
     }
-  }, [
-    left,
-    right,
-    top,
-    bottom,
-    placement,
-    relativeLayerRef?.current,
-    relContainerRef?.current,
-  ]);
+  }, [left, right, top, bottom, placement, relativeLayerRef, relContainerRef]);
 
   useEffect(() => {
     setPosition();
@@ -186,12 +178,16 @@ export const Portal: FunctionComponent<PortalProps> = ({
   children,
   containerId = "portals",
 }) => {
-  let portalsDiv = document.getElementById(containerId);
-  if (!portalsDiv) {
-    portalsDiv = document.createElement("div");
-    portalsDiv.setAttribute("id", containerId);
-    document.body.appendChild(portalsDiv);
-  }
+  // Use useMemo to cache the portal div and avoid repeated DOM lookups
+  const portalsDiv = useMemo(() => {
+    let div = document.getElementById(containerId);
+    if (!div) {
+      div = document.createElement("div");
+      div.setAttribute("id", containerId);
+      document.body.appendChild(div);
+    }
+    return div;
+  }, [containerId]);
 
   return createPortal(children, portalsDiv);
 };

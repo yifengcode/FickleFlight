@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, memo } from "react";
 import styles from "./MatterhornPopup.module.css";
 
 export type MatterhornPopupType = {
@@ -6,7 +6,6 @@ export type MatterhornPopupType = {
   onClose?: () => void;
 };
 
-// 这个方法yigersha
 const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
   className = "",
   onClose,
@@ -15,7 +14,7 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
     <div className={[styles.matterhornPopup, className].join(" ")}>
       <iframe
         className={styles.video}
-        src={`https://www.youtube.com/sssdfsdfY?rhjfjyfcgx/jgoplay=0&mute=0`}
+        src="https://www.youtube.com/embed/DKDz_3bHBWY?autoplay=0&mute=0"
         frameBorder="0"
         allowFullScreen
       />
@@ -23,4 +22,4 @@ const MatterhornPopup: FunctionComponent<MatterhornPopupType> = ({
   );
 };
 
-export default MatterhornPopup;
+export default memo(MatterhornPopup);
