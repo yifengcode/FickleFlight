@@ -5,7 +5,9 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import PortalPopup from "./components/PortalPopup";
+import Homepage from "./components/Homepage";
+import ResultsPage from "./components/ResultsPage";
+import HotelsPage from "./components/HotelsPage";
 
 function App() {
   const action = useNavigationType();
@@ -45,7 +47,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PortalPopup />} />
+      <Route path="/" element={<Homepage />} />
+      <Route path="/homepage" element={<Homepage />} />
+      <Route path="/results" element={<ResultsPage />} />
+      <Route path="/hotels-page" element={<HotelsPage />} />
     </Routes>
   );
 }
