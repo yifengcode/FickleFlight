@@ -12,6 +12,7 @@ import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
 import styles from "./ResultsPage.module.css";
+import navStyles from "./shared/Navigation.module.css";
 
 export type ResultsPageType = {
   className?: string;
@@ -37,41 +38,41 @@ const ResultsPage: FunctionComponent<ResultsPageType> = ({
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={[styles.resultsPage, className].join(" ")}>
-        <header className={styles.topHeader}>
-          <div className={styles.topContainer}>
+        <header className={navStyles.topHeader}>
+          <div className={navStyles.topContainer}>
             <button
-              className={styles.fickleflightLogo}
+              className={navStyles.fickleflightLogo}
               onClick={onFickleflightLogoClick}
             >
-              <img className={styles.symbolsIcon} alt="" src="/symbols.svg" />
+              <img className={navStyles.symbolsIcon} alt="" src="/symbols.svg" />
             </button>
-            <div className={styles.navigationRight}>
-              <div className={styles.navigationMenu}>
+            <div className={navStyles.navigationRight}>
+              <div className={navStyles.navigationMenu}>
                 <div
-                  className={styles.explore}
+                  className={`${navStyles.navigationMenuItem} ${styles.explore}`}
                   onClick={onFickleflightLogoClick}
                 >
                   Explore
                 </div>
-                <button className={styles.search}>{search}</button>
-                <div className={styles.explore} onClick={onHotelsTextClick}>
+                <button className={`${navStyles.navigationMenuItem} ${styles.search}`}>{search}</button>
+                <div className={`${navStyles.navigationMenuItem} ${styles.explore}`} onClick={onHotelsTextClick}>
                   Hotels
                 </div>
-                <button className={styles.offers}>Offers</button>
+                <button className={`${navStyles.navigationMenuItem} ${navStyles.navigationMenuItemSecondary} ${styles.offers}`}>Offers</button>
               </div>
-              <div className={styles.accountSection}>
+              <div className={navStyles.accountSection}>
                 <img
-                  className={styles.hamburgerMenuIcon}
+                  className={navStyles.hamburgerMenuIcon}
                   alt=""
                   src="/hamburgermenu.svg"
                 />
                 <img
-                  className={styles.notificationBellIcon}
+                  className={navStyles.notificationBellIcon}
                   alt=""
                   src="/notification-bell.svg"
                 />
                 <img
-                  className={styles.unsplashd1upkifd04aIcon}
+                  className={navStyles.profileIcon}
                   alt=""
                   src="/unsplashd1upkifd04a@2x.png"
                 />

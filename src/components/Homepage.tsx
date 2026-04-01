@@ -14,6 +14,7 @@ import MatterhornPopup from "./MatterhornPopup";
 import PortalPopup from "./PortalPopup";
 import { useNavigate } from "react-router-dom";
 import styles from "./Homepage.module.css";
+import navStyles from "./shared/Navigation.module.css";
 
 export type HomepageType = {
   className?: string;
@@ -48,39 +49,39 @@ const Homepage: FunctionComponent<HomepageType> = ({ className = "" }) => {
       <>
         <div className={[styles.homepage, className].join(" ")}>
           <div className={styles.heroSection}>
-            <header className={styles.topHeader}>
-              <div className={styles.topContainer}>
-                <button className={styles.fickleflightLogo}>
+            <header className={navStyles.topHeader}>
+              <div className={navStyles.topContainer}>
+                <button className={navStyles.fickleflightLogo}>
                   <img
-                    className={styles.symbolsIcon}
+                    className={navStyles.symbolsIcon}
                     alt=""
                     src="/symbols1.svg"
                   />
                 </button>
-                <div className={styles.navigationRight}>
-                  <div className={styles.navigationMenu}>
-                    <button className={styles.explore}>Explore</button>
-                    <div className={styles.search} onClick={onSearchTextClick}>
+                <div className={navStyles.navigationRight}>
+                  <div className={navStyles.navigationMenu}>
+                    <button className={`${navStyles.navigationMenuItem} ${styles.explore}`}>Explore</button>
+                    <div className={`${navStyles.navigationMenuItem} ${styles.search}`} onClick={onSearchTextClick}>
                       Search
                     </div>
-                    <div className={styles.search} onClick={onHotelsTextClick}>
+                    <div className={`${navStyles.navigationMenuItem} ${styles.search}`} onClick={onHotelsTextClick}>
                       Hotels
                     </div>
-                    <button className={styles.offers}>Offers</button>
+                    <button className={`${navStyles.navigationMenuItem} ${navStyles.navigationMenuItemSecondary} ${styles.offers}`}>Offers</button>
                   </div>
-                  <div className={styles.accountSection}>
+                  <div className={navStyles.accountSection}>
                     <img
-                      className={styles.hamburgerMenuIcon}
+                      className={navStyles.hamburgerMenuIcon}
                       alt=""
                       src="/hamburgermenu.svg"
                     />
                     <img
-                      className={styles.notificationBellIcon}
+                      className={navStyles.notificationBellIcon}
                       alt=""
                       src="/notification-bell.svg"
                     />
                     <img
-                      className={styles.profilePictureIcon}
+                      className={navStyles.profileIcon}
                       alt=""
                       src="/unsplashd1upkifd04a@2x.png"
                     />
